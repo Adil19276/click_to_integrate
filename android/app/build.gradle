@@ -1,0 +1,28 @@
+plugins {
+    id "dev.flutter.flutter-gradle-plugin"
+    id "com.android.application"
+    id "org.jetbrains.kotlin.android"
+}
+
+android {
+    namespace = "com.example.click_to_integrate" // apna package name yahan likho
+    compileSdk = 34
+
+    defaultConfig {
+        applicationId = "com.example.click_to_integrate"
+        minSdk = 21
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
